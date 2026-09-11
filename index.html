@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Om Karthi Healing Centre | Feel the Vibes</title>
+  <meta name="description" content="Om Karthi Healing Centre offering Acupuncture, Spiritual Healing, Natural Therapies, Family Wellness Programs, and Wealth Guidance by Healer L. Karthik Kumar.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Montserrat:wght@600;700;800&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Canvas for Floating Glow Particles -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">
+        <svg class="brand-lotus-svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3c-1.5 3-4 5.5-7 6.5 2.5 2 4.5 5 5 8.5 1-3.5 3-6.5 5.5-8.5-3-1-5.5-3.5-7-6.5zM12 21c-4.5-2-8-6.5-8-12 0 4 2.5 8 8 12zm0 0c5.5-4 8-8 8-12 0 5.5-3.5 10-8 12z"/>
+        </svg>
+        <span class="brand-text">Om Karthi Healing Centre</span>
+      </a>
+
+      <!-- Desktop & Mobile Drawer Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pillars">Gallery</a></li>
+        <li><a href="#quote">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="mobile-drawer-cta">
+          <button class="btn-book-appointment btn-book-trigger mobile-drawer-btn">
+            <i class="fa-solid fa-calendar-days"></i> Book Appointment
+          </button>
+        </li>
+      </ul>
+
+      <!-- Desktop Header CTA Button -->
+      <button class="btn-book-appointment btn-book-trigger desktop-cta-btn">
+        <i class="fa-solid fa-calendar-days"></i> Book Appointment
+      </button>
+
+      <!-- Mobile Hamburger Menu Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="home">
+    <div class="hero-container">
+      <div class="hero-text-wrap">
+        <!-- Golden Om Crest -->
+        <div class="om-crest-wrap">
+          <div class="om-crest">
+            <svg class="leaf-left-svg" viewBox="0 0 40 20" fill="currentColor">
+              <path d="M0,10 Q15,0 40,10 Q15,20 0,10 Z"/>
+            </svg>
+            <span class="om-char">&#x0950;</span>
+            <svg class="leaf-right-svg" viewBox="0 0 40 20" fill="currentColor">
+              <path d="M0,10 Q25,0 40,10 Q25,20 0,10 Z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="hero-title">
+          <svg class="title-leaf-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17,8C8,10 59,16 3,21C12,19 16,13 17,8Z"/></svg>
+          <span>Om Karthi Healing Centre</span>
+          <svg class="title-leaf-svg flip-h" viewBox="0 0 24 24" fill="currentColor"><path d="M17,8C8,10 59,16 3,21C12,19 16,13 17,8Z"/></svg>
+        </h1>
+
+        <!-- Ornate Flute Graphic & Subtitle -->
+        <div class="hero-flute-divider">
+          <div class="bansuri-flute">
+            <div class="flute-hole f1"></div>
+            <div class="flute-hole f2"></div>
+            <div class="flute-hole f3"></div>
+            <div class="flute-hole f4"></div>
+            <div class="flute-hole f5"></div>
+            <div class="flute-tassel">
+              <div class="tassel-string"></div>
+              <div class="tassel-feather"></div>
+            </div>
+          </div>
+          <p class="hero-subtitle">Feel the Vibes</p>
+        </div>
+
+        <!-- Tagline -->
+        <div class="hero-bullets">
+          <span>Healing Mind</span> <span class="bullet-dot">•</span> <span>Healing Body</span> <span class="bullet-dot">•</span> <span>Healing Soul</span>
+        </div>
+      </div>
+
+      <!-- Main Hero Artwork Banner (Full Width) -->
+      <div class="hero-image-box">
+        <img src="assets/hero_krishna_peacock.jpg" alt="Om Karthi Healing Centre Divine Artwork" class="hero-img">
+      </div>
+    </div>
+  </header>
+
+  <!-- 6 Key Feature Badges Bar -->
+  <section class="features-bar-section" id="pillars">
+    <div class="features-grid">
+      <!-- Badge 1 -->
+      <div class="feature-badge btn-book-trigger" data-service="Acupuncture Treatment">
+        <div class="badge-icon-wrap">
+          <i class="fa-solid fa-person-rays"></i>
+        </div>
+        <span class="badge-title">Acupuncture<br>Healing</span>
+      </div>
+
+      <!-- Badge 2 -->
+      <div class="feature-badge btn-book-trigger" data-service="Spiritual Healing">
+        <div class="badge-icon-wrap">
+          <svg class="icon-svg-lotus" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-1.5 3-4 5.5-7 6.5 2.5 2 4.5 5 5 8.5 1-3.5 3-6.5 5.5-8.5-3-1-5.5-3.5-7-6.5z"/>
+          </svg>
+        </div>
+        <span class="badge-title">Spiritual<br>Healing</span>
+      </div>
+
+      <!-- Badge 3 -->
+      <div class="feature-badge btn-book-trigger" data-service="Natural Therapies">
+        <div class="badge-icon-wrap">
+          <i class="fa-solid fa-heart-pulse"></i>
+        </div>
+        <span class="badge-title">Better Health<br>&amp; Wellness</span>
+      </div>
+
+      <!-- Badge 4 -->
+      <div class="feature-badge btn-book-trigger" data-service="Family Wellness Programs">
+        <div class="badge-icon-wrap">
+          <i class="fa-solid fa-people-roof"></i>
+        </div>
+        <span class="badge-title">Healthy<br>Families</span>
+      </div>
+
+      <!-- Badge 5 -->
+      <div class="feature-badge btn-book-trigger" data-service="Wealth & Prosperity Guidance">
+        <div class="badge-icon-wrap">
+          <i class="fa-solid fa-coins"></i>
+        </div>
+        <span class="badge-title">Prosperity<br>&amp; Abundance</span>
+      </div>
+
+      <!-- Badge 6 -->
+      <div class="feature-badge btn-book-trigger" data-service="Spiritual Healing">
+        <div class="badge-icon-wrap">
+          <span class="badge-om-symbol">&#x0950;</span>
+        </div>
+        <span class="badge-title">Positive<br>Vibes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="services-section" id="services">
+    <h2 class="section-heading">
+      <svg class="heading-ornament" viewBox="0 0 50 20" fill="currentColor">
+        <path d="M0,10 Q25,0 50,10 Q25,20 0,10 Z"/>
+      </svg>
+      Our Services
+      <svg class="heading-ornament flip-h" viewBox="0 0 50 20" fill="currentColor">
+        <path d="M0,10 Q25,0 50,10 Q25,20 0,10 Z"/>
+      </svg>
+    </h2>
+
+    <div class="services-grid">
+      <!-- Card 1 -->
+      <div class="service-card btn-book-trigger" data-service="Acupuncture Treatment">
+        <div class="service-img-wrap">
+          <img src="assets/service_acupuncture.jpg" alt="Acupuncture Treatment">
+        </div>
+        <div class="service-label-box">
+          <h3 class="service-title">Acupuncture Treatment</h3>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card btn-book-trigger" data-service="Spiritual Healing">
+        <div class="service-img-wrap">
+          <img src="assets/service_spiritual.jpg" alt="Spiritual Healing">
+        </div>
+        <div class="service-label-box">
+          <h3 class="service-title">Spiritual Healing</h3>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card btn-book-trigger" data-service="Natural Therapies">
+        <div class="service-img-wrap">
+          <img src="assets/service_natural.jpg" alt="Natural Therapies">
+        </div>
+        <div class="service-label-box">
+          <h3 class="service-title">Natural Therapies</h3>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card btn-book-trigger" data-service="Family Wellness Programs">
+        <div class="service-img-wrap">
+          <img src="assets/service_family.jpg" alt="Family Wellness Programs">
+        </div>
+        <div class="service-label-box">
+          <h3 class="service-title">Family Wellness Programs</h3>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card btn-book-trigger" data-service="Wealth & Prosperity Guidance">
+        <div class="service-img-wrap">
+          <img src="assets/service_wealth.jpg" alt="Wealth & Prosperity Guidance">
+        </div>
+        <div class="service-label-box">
+          <h3 class="service-title">Wealth &amp; Prosperity Guidance</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote & 5 Badges Section -->
+  <section class="quote-section" id="quote">
+    <!-- Right Half-Background Deer Artwork -->
+    <div class="quote-deer-bg-wrap">
+      <img src="assets/golden_deer_lotus.jpg" alt="Golden Deer Artwork Background" class="quote-deer-bg-img">
+    </div>
+
+    <div class="quote-container">
+      <!-- Quote Box & 5 Badges -->
+      <div class="quote-box">
+        <blockquote class="quote-text">
+          &ldquo;When your Mind is Peaceful,<br>
+          Your Body is Healthy,<br>
+          and Your Soul is Happy. .<br>
+          Life Flows with Abundance.&rdquo;
+        </blockquote>
+
+        <!-- Quote Flourish Line -->
+        <div class="quote-divider">
+          <div class="quote-line left"></div>
+          <svg class="quote-lotus-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3c-1.5 3-4 5.5-7 6.5 2.5 2 4.5 5 5 8.5 1-3.5 3-6.5 5.5-8.5-3-1-5.5-3.5-7-6.5z"/>
+          </svg>
+          <div class="quote-line right"></div>
+        </div>
+
+        <!-- 5 Bottom Circular Icon Badges -->
+        <div class="quote-badges-grid">
+          <div class="quote-badge btn-book-trigger" data-service="Natural Therapies">
+            <div class="quote-badge-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <span class="quote-badge-title">Natural<br>Healing</span>
+          </div>
+
+          <div class="quote-badge btn-book-trigger" data-service="Spiritual Healing">
+            <div class="quote-badge-icon">
+              <i class="fa-solid fa-person-praying"></i>
+            </div>
+            <span class="quote-badge-title">Holistic<br>Wellness</span>
+          </div>
+
+          <div class="quote-badge btn-book-trigger" data-service="Spiritual Healing">
+            <div class="quote-badge-icon">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <span class="quote-badge-title">Positive<br>Energy</span>
+          </div>
+
+          <div class="quote-badge btn-book-trigger" data-service="Wealth & Prosperity Guidance">
+            <div class="quote-badge-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <span class="quote-badge-title">Financial<br>Growth</span>
+          </div>
+
+          <div class="quote-badge btn-book-trigger" data-service="Family Wellness Programs">
+            <div class="quote-badge-icon">
+              <i class="fa-regular fa-face-smile"></i>
+            </div>
+            <span class="quote-badge-title">Happiness<br>&amp; Joy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gratitude & Healer Banner -->
+  <section class="gratitude-banner" id="about">
+    <div class="gratitude-container">
+      <div class="gratitude-text-side">
+        <p class="gratitude-line">Gratitude to God &bull; Universe &bull; Kulatheivam &bull; Nava Kolgal &bull; Siddhar Gurus</p>
+        <p class="healer-title">Healer L. Karthik Kumar</p>
+      </div>
+
+      <div class="signature-box">
+        L Karthikumar
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Navigation -->
+  <footer class="footer-bar" id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <svg class="footer-lotus-svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3c-1.5 3-4 5.5-7 6.5 2.5 2 4.5 5 5 8.5 1-3.5 3-6.5 5.5-8.5-3-1-5.5-3.5-7-6.5z"/>
+        </svg>
+        <span>Om Karthi Healing Centre</span>
+      </div>
+
+      <div class="footer-subtitle">
+        <svg class="footer-lotus-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-1.5 3-4 5.5-7 6.5 2.5 2 4.5 5 5 8.5 1-3.5 3-6.5 5.5-8.5-3-1-5.5-3.5-7-6.5z"/></svg>
+        <span>Feel the Vibes</span>
+        <svg class="footer-lotus-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-1.5 3-4 5.5-7 6.5 2.5 2 4.5 5 5 8.5 1-3.5 3-6.5 5.5-8.5-3-1-5.5-3.5-7-6.5z"/></svg>
+      </div>
+
+      <div class="social-links">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Uninterrupted Floating Mobile Sticky CTA Button (Visible on Mobile Only) -->
+  <div class="mobile-sticky-cta" id="mobile-sticky-cta">
+    <button class="btn-book-appointment btn-book-trigger mobile-floating-btn">
+      <i class="fa-solid fa-calendar-days"></i> Book Appointment
+    </button>
+  </div>
+
+  <!-- Appointment Booking Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close" aria-label="Close Modal">&times;</button>
+      <h3 class="modal-title">Book an Appointment</h3>
+      <p class="modal-subtitle">Begin your healing journey with Healer L. Karthik Kumar</p>
+
+      <form id="appointment-form">
+        <div class="form-group">
+          <label for="modal-name">Full Name</label>
+          <input type="text" id="modal-name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-phone">Phone / WhatsApp Number</label>
+          <input type="tel" id="modal-phone" placeholder="Enter your contact number" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-service-select">Select Healing Service</label>
+          <select id="modal-service-select" required>
+            <option value="">-- Choose a Service --</option>
+            <option value="Acupuncture Treatment">Acupuncture Treatment</option>
+            <option value="Spiritual Healing">Spiritual Healing</option>
+            <option value="Natural Therapies">Natural Therapies</option>
+            <option value="Family Wellness Programs">Family Wellness Programs</option>
+            <option value="Wealth & Prosperity Guidance">Wealth &amp; Prosperity Guidance</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-date">Preferred Date &amp; Time</label>
+          <input type="datetime-local" id="modal-date" required>
+        </div>
+
+        <div class="form-group">
+          <label for="modal-msg">Special Requirements / Notes</label>
+          <textarea id="modal-msg" rows="3" placeholder="Describe any specific health concerns..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Confirm Appointment</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toast-msg">
+    <i class="fa-solid fa-circle-check"></i>
+    Appointment request sent successfully! We will contact you shortly.
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
