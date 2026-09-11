@@ -35,7 +35,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
@@ -242,7 +243,8 @@ body {
   gap: 0.8rem;
 }
 
-.leaf-left-svg, .leaf-right-svg {
+.leaf-left-svg,
+.leaf-right-svg {
   width: 40px;
   height: 20px;
   color: var(--emerald-accent);
@@ -317,7 +319,7 @@ body {
   height: 5px;
   border-radius: 50%;
   background: #4A3300;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.8);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .flute-tassel {
@@ -579,7 +581,7 @@ body {
   position: relative;
   z-index: 2;
   padding: 4.5rem 1.5rem;
-  background: radial-gradient(ellipse at center, rgba(254, 246, 218, 0.95) 0%, rgba(253, 249, 238, 0.6) 100%);
+  background: radial-gradient(ellipse at center, #FDF6DE 0%, #F8EECB 100%);
   overflow: hidden;
 }
 
@@ -771,7 +773,8 @@ body {
   gap: 1rem;
 }
 
-.footer-brand, .footer-subtitle {
+.footer-brand,
+.footer-subtitle {
   display: flex;
   align-items: center;
   gap: 0.6rem;
@@ -806,7 +809,7 @@ body {
   text-decoration: none;
   font-size: 1.15rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-icon i {
@@ -1016,13 +1019,16 @@ body {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .quote-container {
     justify-content: center;
   }
+
   .quote-box {
     max-width: 100%;
     padding: 1rem 0;
   }
+
   .quote-deer-bg-wrap {
     width: 65%;
   }
@@ -1033,12 +1039,15 @@ body {
   .desktop-cta-btn {
     display: none !important;
   }
+
   .mobile-drawer-cta {
     display: block;
   }
+
   .mobile-toggle {
     display: block;
   }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -1050,24 +1059,30 @@ body {
     padding: 1.5rem;
     gap: 1.2rem;
     border-bottom: 2px solid var(--primary-gold);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
+
   .nav-links.active {
     display: flex;
   }
+
   .features-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.2rem 0.5rem;
   }
+
   .feature-badge:not(:last-child)::after {
     display: none;
   }
+
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .quote-badges-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .quote-deer-bg-wrap {
     width: 100%;
     opacity: 0.2;
@@ -1079,80 +1094,103 @@ body {
   .nav-container {
     padding: 0.6rem 1rem;
   }
+
   .brand-text {
     font-size: 1rem;
   }
+
   .hero-section {
     padding: 1.5rem 0 0.8rem 0;
   }
+
   .hero-text-wrap {
     padding: 0 0.8rem;
   }
+
   .om-char {
     font-size: 3rem;
   }
+
   .bansuri-flute {
     width: 220px;
     height: 10px;
   }
+
   .features-bar-section {
     padding: 1.4rem 0.5rem;
   }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.4rem 0.5rem;
   }
+
   .badge-icon-wrap {
     width: 58px;
     height: 58px;
     font-size: 1.4rem;
   }
+
   .badge-title {
     font-size: 0.85rem;
   }
+
   .services-section {
     padding: 2.5rem 1rem;
   }
+
   .services-grid {
     grid-template-columns: 1fr;
     max-width: 420px;
     margin: 0 auto;
   }
+
   .quote-section {
-    padding: 3rem 1rem 4.5rem 1rem; /* Extra padding at bottom for floating mobile CTA */
+    padding: 3rem 1rem 4.5rem 1rem;
+    /* Extra padding at bottom for floating mobile CTA */
   }
+
   .quote-box {
     padding: 0;
   }
+
   .quote-line {
     width: 80px;
   }
+
   .quote-badges-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.2rem 0.6rem;
   }
+
   .quote-deer-bg-wrap {
     width: 100%;
     opacity: 0.15;
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
   }
+
   .gratitude-banner {
     padding: 1.4rem 1rem;
   }
+
   .gratitude-container {
     flex-direction: column;
     text-align: center;
     gap: 0.8rem;
   }
+
   .footer-bar {
-    padding: 1.4rem 1rem 5.5rem 1rem; /* Extra bottom padding so floating button doesn't cover footer text */
+    padding: 1.4rem 1rem 5.5rem 1rem;
+    /* Extra bottom padding so floating button doesn't cover footer text */
   }
+
   .footer-container {
     flex-direction: column;
     text-align: center;
     gap: 0.8rem;
   }
+
   .toast-msg {
     left: 1rem;
     right: 1rem;
@@ -1167,12 +1205,15 @@ body {
   .brand-text {
     font-size: 0.88rem;
   }
+
   .hero-title {
     font-size: 1.25rem;
   }
+
   .quote-text {
     font-size: 1.2rem;
   }
+
   .quote-badges-grid {
     grid-template-columns: repeat(2, 1fr);
   }
