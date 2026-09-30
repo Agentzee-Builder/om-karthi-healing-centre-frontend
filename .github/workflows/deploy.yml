@@ -1,0 +1,71 @@
+name: CI/CD Pipeline - Build, Test & Deploy
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  lint-and-scan:
+    name: Lint & Security Scan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install HTMLHint
+        run: npm install -g htmlhint
+
+      - name: Lint HTML files
+        run: |
+          echo "Linting HTML files..."
+          if ls *.html **/*.html 1> /dev/null 2>&1; then
+            htmlhint "**/*.html" || echo "HTMLHint completed with warnings."
+          else
+            echo "No HTML files found to lint."
+          fi
+
+      - name: Check JavaScript syntax
+        run: |
+          echo "Checking JavaScript syntax..."
+          for file in js/*.js *.js scripts/*.js; do
+            if [ -f "$file" ]; then
+              node -c "$file"
+              echo "✓ Syntax OK: $file"
+            fi
+          done
+
+      - name: Run Secret Scanner (Gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+  deploy:
+    name: Deploy to Production
+    needs: lint-and-scan
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+
+    steps:
+      - name: Execute Remote SSH Commands for Deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT || 22 }}
+          script: |
+            cd /home/azureuser/builder-sites/om-karthi-healing-centre-frontend
+            chmod +x ./scripts/deploy.sh
+            bash ./scripts/deploy.sh

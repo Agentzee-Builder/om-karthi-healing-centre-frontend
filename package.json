@@ -1,0 +1,13 @@
+{
+  "name": "om-karthi-healing-centre-frontend",
+  "version": "1.0.0",
+  "description": "Om Karthi Healing Centre Frontend",
+  "main": "index.html",
+  "scripts": {
+    "sitemap": "node scripts/generate-sitemap.js",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

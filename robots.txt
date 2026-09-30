@@ -1,0 +1,12 @@
+# ==============================================================================
+# Robots.txt for Om Karthi Healing Centre (https://omkarthihealingcentre.in)
+# ==============================================================================
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /styles.css
+Allow: /script.js
+
+# Sitemap location
+Sitemap: https://omkarthihealingcentre.in/sitemap.xml
